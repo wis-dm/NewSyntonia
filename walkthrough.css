@@ -1,0 +1,68 @@
+/* Scroll walkthrough. Scoped to #walk and html.walk-on so the classic page is untouched.
+   Without JS (or with reduced-motion) none of this applies and the original page shows. */
+#walk{display:none}
+.walk-on #walk{display:block;position:relative}
+.walk-on .find-a-home,.walk-on .renting-difference,.walk-on .how-syntonia-works,
+.walk-on .roommate-matching,.walk-on .tenant-advocacy,
+.walk-on .featured-homes .eyebrow,.walk-on .featured-homes-heading{display:none}
+
+.walk-stage{position:sticky;top:var(--hdr,0px);height:calc(100vh - var(--hdr,0px));height:calc(100svh - var(--hdr,0px));overflow:hidden;background:#e9e4da}
+.w-room{position:absolute;inset:0;will-change:transform,opacity}
+.w-room img{width:100%;height:100%;object-fit:cover;display:block}
+
+.w-layer{position:absolute;inset:0;display:flex;align-items:center;padding:24px 5vw 0;pointer-events:none;visibility:hidden;opacity:0}
+.w-layer.on{pointer-events:auto}
+.w-panel{position:relative;width:min(36vw,520px);min-width:300px;color:#111}
+.w-eyebrow{display:block;color:#3b5bdb;font-size:.75rem;font-weight:700;letter-spacing:.08em;margin-bottom:.9rem}
+.w-panel h1,.w-panel h2{margin:0 0 1rem;line-height:1.05;font-size:clamp(2.1rem,4.4vw,3.8rem);color:#111}
+.w-panel h1 .hl{color:#3b5bdb}
+.w-panel p{margin:0 0 1.4rem;font-size:1.05rem;line-height:1.5;color:#3f3f4d;max-width:38ch}
+.w-panel ol{list-style:none;margin:0 0 1.4rem;padding:0}
+.w-panel li{display:flex;gap:.9rem;padding:.65rem 0;border-top:1px solid rgba(0,0,0,.15)}
+.w-panel li h4{margin:0 0 .15rem;font-size:1.05rem;color:#111}
+.w-panel li p{margin:0;font-size:.95rem}
+.w-num{font-weight:700;color:#3b5bdb;min-width:1.7rem}
+.w-btn{background:rgb(0,0,145);color:#fff;border:0;border-radius:.7rem;padding:.7rem 1.2rem;font:inherit;cursor:pointer}
+.w-btn:hover,.w-btn:focus-visible{background:#000075;outline:2px solid #3b5bdb;outline-offset:2px}
+.w-link{color:#3b5bdb;font-weight:600;text-decoration:none;margin-left:1rem}
+.w-actions{display:flex;align-items:center;flex-wrap:wrap;gap:.5rem}
+.w-cards{position:absolute;left:calc(100% + 5vw);top:0;width:min(30vw,340px);display:flex;flex-direction:column;gap:1rem}
+.w-card{background:rgba(255,255,255,.92);border-radius:14px;padding:1rem 1.2rem;box-shadow:0 8px 28px rgba(0,0,0,.15)}
+.w-card h3{margin:.1rem 0 .4rem;font-size:1.1rem}
+.w-card p{font-size:.92rem;margin:0 0 .8rem}
+.w-card .w-btn{padding:.5rem .9rem;font-size:.9rem}
+.w-chips{position:absolute;inset:0;pointer-events:none}
+.w-chip{position:absolute;display:flex;align-items:center;gap:.5rem;background:rgba(255,255,255,.9);color:#111;padding:.5rem 1rem;border-radius:999px;font-size:.9rem;font-weight:600;box-shadow:0 6px 22px rgba(0,0,0,.15);animation:w-float 5s ease-in-out infinite}
+.w-chip::before{content:"";width:.5rem;height:.5rem;border-radius:50%;background:#3b5bdb}
+.w-badge{border-radius:14px;padding:.7rem 1rem}
+.w-badge::before{display:none}
+.w-badge i{color:#3b5bdb;font-size:1.3rem}
+.w-badge strong{display:block}
+.w-badge small{display:block;font-weight:400;color:#555}
+.w-cue{position:absolute;left:50%;bottom:4vh;color:#111;font-size:1.4rem;animation:w-float 2.2s ease-in-out infinite}
+@keyframes w-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+
+@media (max-width:768px){
+ .w-layer{align-items:flex-end;padding:0}
+ .w-panel{width:100%;min-width:0;padding:3.2rem 6vw 1.6rem;background:linear-gradient(to bottom,rgba(255,255,255,0) 0,#fff 2.8rem)}
+ .w-cards{position:static;width:auto}
+ .w-chip:nth-child(n+3){display:none}
+ .w-chips{bottom:auto;height:40%}
+ .w-chip:nth-child(1){top:10% !important;right:6vw !important;left:auto !important}
+ .w-chip:nth-child(2){top:32% !important;left:8vw !important;right:auto !important}
+ .w-cue{display:none}
+}
+@media (prefers-reduced-motion:reduce){.w-chip,.w-cue{animation:none}}
+
+/* ---- Mobile only: items inside a room slide sideways as the visitor scrolls down ---- */
+.w-dots{display:none}
+@media (max-width:768px){
+ .w-view{overflow:hidden;margin:0 0 .4rem}
+ .w-slides{display:flex;gap:.75rem;margin:0;padding:0;will-change:transform;transform:translateX(calc(var(--x,0) * -1 * (100% + .75rem)))}
+ .w-panel .w-slides > li,.w-slides > .w-card{flex:none;width:100%;box-sizing:border-box;display:block;background:#fff;border:1px solid rgba(0,0,0,.14);border-radius:12px;padding:.9rem 1rem;box-shadow:none}
+ .w-panel .w-slides > li .w-num{display:block;margin-bottom:.2rem}
+ .w-cards.w-slides{flex-direction:row;width:auto}
+ .w-dots{display:flex;gap:6px;justify-content:center;min-height:8px;margin:0 0 1rem}
+ .w-dots span{width:7px;height:7px;border-radius:4px;background:rgba(0,0,0,.25);transition:width .3s,background .3s}
+ .w-dots span.on{width:18px;background:#3b5bdb}
+}

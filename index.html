@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syntonia</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="walkthrough.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" onerror="this.onerror=null; this.href='fontawesome/css/all.min.css';">
+    <script src="script.js" defer></script>
+    <script src="walkthrough.js" defer></script>
+</head>
+
+<body id="top">
+    
+    <header class="nav-bar">
+        <a href="index.html" class="logo">
+            <img src="images/syntonia_logo_black.svg" alt="syntonia logo">
+        </a>
+
+        <button class="hamburger" aria-label="Toggle menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        
+        <nav class="nav-links">
+            <a href="#homes">Homes</a>
+            <a href="#roommates">Roommates</a>
+            <a href="#tenantAdvocacy">Tenant Advocacy</a>
+            <a href="#howItWorks">How It Works</a>
+            <br> <br>
+            
+            <button class="nav-btn" data-open="getStarted">Get Started</button>
+        </nav>  
+    </header>
+
+    <!-- Scroll walkthrough: see WALKTHROUGH-CHANGES.md. Hidden unless walkthrough.js runs. -->
+    <div id="walk">
+      <div class="walk-stage">
+        <div class="w-room" data-door="[0.71,0.65]" data-pos="0.6"><img src="images/walkthrough/room-1-building-exterior.jpg" alt="Apartment building exterior in Lagos"></div>
+        <div class="w-room" data-door="[0.53,0.52]" data-pos="0.3"><img src="images/walkthrough/room-2-flat-door.jpg" alt="Landing outside a flat door"></div>
+        <div class="w-room" data-door="[0.69,0.52]" data-pos="0.5"><img src="images/walkthrough/room-3-hallway.jpg" alt="Hallway inside a flat"></div>
+        <div class="w-room" data-door="[0.53,0.55]" data-pos="0.4"><img src="images/walkthrough/room-4-living-room.jpg" alt="Living room"></div>
+        <div class="w-room" data-door="[0.59,0.5]" data-pos="0.35"><img src="images/walkthrough/room-5-kitchen.jpg" alt="Kitchen"></div>
+        <div class="w-room" data-door="[0.5,0.5]" data-pos="0.35"><img src="images/walkthrough/room-6-bedroom.jpg" alt="Bedroom"></div>
+        <div class="w-layer" data-i="0"><div class="w-panel">
+            <span class="w-eyebrow">BUILT FOR MODERN RENTERS IN NIGERIA</span>
+            <h1>Find a home.<br>Find your <span class="hl">people.</span><br>Feel at home.</h1>
+            <p>Syntonia helps modern renters find compatible roommates and get quick support when things go wrong.</p>
+            <div class="w-actions"><button class="w-btn" data-open="roommateForm">Find A Roommate</button><a class="w-link" href="#homes">Explore Homes →</a></div>
+          </div>
+          <div class="w-chips"><div class="w-chip w-badge" style="right:8vw;top:24vh"><i class="fa-solid fa-shield"></i><span><strong>Tenant Protected</strong><small>We have your back</small></span></div></div>
+          <i class="fa-solid fa-arrow-down w-cue" aria-hidden="true"></i></div>
+        <div class="w-layer" data-i="1"><div class="w-panel">
+            <span class="w-eyebrow">RENTING SHOULD FEEL DIFFERENT</span>
+            <h2>Finding a place is only the beginning.</h2>
+            <p>The right home matters. So does who you share it with - and who stands with you when something goes wrong.</p>
+            <div class="w-view"><div class="w-cards w-slides">
+              <div class="w-card"><span class="w-eyebrow">01 - TENANT ADVOCACY</span><h3>Someone should have your back.</h3><p>Housing problem happens. Syntonia helps you report them, follow up and get the support you need.</p><button class="w-btn" data-open="tenantSupport">Get Tenant Support →</button></div>
+              <div class="w-card"><span class="w-eyebrow">02 - ROOMMATE MATCHING</span><h3>Compatibility matters.</h3><p>Find responsible roommates who fit your lifestyle, budget and expectation.</p><button class="w-btn" data-open="roommateForm">Find My Match →</button></div>
+            </div></div><div class="w-dots"></div></div></div>
+        <div class="w-layer" data-i="2"><div class="w-panel">
+            <span class="w-eyebrow">HOW SYNTONIA WORKS</span>
+            <h2>Simple from search to stay.</h2>
+            <div class="w-view"><ol class="w-slides">
+              <li><span class="w-num">01</span><div><h4>Tell us what you need.</h4><p>Location, budget and lifestyle - in under two minutes.</p></div></li>
+              <li><span class="w-num">02</span><div><h4>Find your match</h4><p>Discover suitable homes and compatible roommates.</p></div></li>
+              <li><span class="w-num">03</span><div><h4>Stay Supported</h4><p>Syntonia is there when you need help from day one.</p></div></li>
+            </ol></div><div class="w-dots"></div></div></div>
+        <div class="w-layer" data-i="3"><div class="w-panel">
+            <span class="w-eyebrow">ROOMMATE MATCHING</span>
+            <h2>The right roommate can make a house feel like a home.</h2>
+            <p>We look beyond location and budget. Lifestyle compatibility matters too.</p>
+            <button class="w-btn" data-open="roommateForm">Find a Roommate →</button></div>
+          <div class="w-chips"><span class="w-chip" style="right:9vw;top:22vh;animation-delay:-0s">Early riser</span><span class="w-chip" style="right:24vw;top:38vh;animation-delay:-1s">Non-smoker</span><span class="w-chip" style="right:10vw;top:58vh;animation-delay:-2s">Works remotely</span><span class="w-chip" style="right:26vw;top:76vh;animation-delay:-3s">Quiet home</span></div></div>
+        <div class="w-layer" data-i="4"><div class="w-panel">
+            <span class="w-eyebrow">TENANT ADVOCACY</span>
+            <h2>Your home.<br>Your peace of mind.</h2>
+            <p>You shouldn't have to handle every housing problem alone.</p>
+            <div class="w-view"><ol class="w-slides">
+              <li><span class="w-num">1</span><div><h4>Report</h4><p>Tell us what happened.</p></div></li>
+              <li><span class="w-num">2</span><div><h4>Follow Up</h4><p>We help communicate and follow up with your landlord.</p></div></li>
+              <li><span class="w-num">3</span><div><h4>Resolve</h4><p>Stay informed as the issue is addressed.</p></div></li>
+            </ol></div><div class="w-dots"></div>
+            <button class="w-btn" data-open="tenantSupport">Get Tenant Support →</button></div>
+          <div class="w-chips"><span class="w-chip" style="right:9vw;top:22vh;animation-delay:-0s">Maintenance / Repairs</span><span class="w-chip" style="right:20vw;top:66vh;animation-delay:-2s">Rent or deposit dispute</span></div></div>
+        <div class="w-layer" data-i="5"><div class="w-panel">
+            <span class="w-eyebrow">FEATURED HOMES</span>
+            <h2>A few places worth coming home to.</h2></div>
+          <div class="w-chips"><span class="w-chip" style="right:12vw;top:26vh;animation-delay:-0s">Lagos</span><span class="w-chip" style="right:24vw;top:64vh;animation-delay:-2s">Abuja</span></div><i class="fa-solid fa-arrow-down w-cue" aria-hidden="true"></i></div>
+      </div>
+    </div>
+    
+    
+
+    
+    <main class="find-a-home">
+        <div class="hero-image-wrap">
+            <img src="images/bedroom-hero.jpeg" alt="image of a room">
+
+            <div class="tenant-badge">
+                <i class="fa-solid fa-shield"></i>
+                
+                <div class="text">
+                    <strong>Tenant Protected</strong>
+                    <p>We have your back</p>
+                </div>
+            </div>
+        </div>
+
+        <article class="section-main">
+            <span class="eyebrow">BUILT FOR MODERN RENTERS IN NIGERIA</span>
+
+            <h1>Find a home.</h1>
+            <h1>Find your <span class="highlight">people.</span> </h1>
+            <h1>Feel at home.</h1>
+
+            <p>Syntonia helps modern renters find compatible roommates and get quick support when things go wrong.</p>
+
+            <div class="main-btn">
+                <button class="st-btn" data-open="roommateForm">Find A Roommate</button>
+
+                <button class="nd-btn" onclick="document.getElementById('homes').scrollIntoView()">Explore Homes →</button>
+            </div>
+
+        </article>
+    </main>
+    
+    
+    
+    
+    <section class="renting-difference">
+        <span class="eyebrow">RENTING SHOULD FEEL DIFFERENT</span>
+
+        <h2>Finding a place is only the beginning.</h2>
+
+        <p>The right home matters. So does who you share it with - and who stands with you when something goes wrong.</p>
+
+        <div class="feature-cards">
+            <div class="feature-card">
+                <span class="eyebrow">01 - TENANT ADVOCACY</span>
+
+                <h3>Someone should have your back.</h3>
+
+                <p>Housing problem happens. Syntonia helps you report them, follow up and get the support you need.</p>
+
+                <button data-open="tenantSupport">Get Tenant Support →</button>
+            </div>
+            <div class="feature-card">
+                <span class="eyebrow">02 - ROOMMATE MATCHING</span>
+
+                <h3>Compatibility matters.</h3>
+
+                <p>Find responsible roommates who fit your lifestyle, budget and expectation.</p>
+
+                <button data-open="roommateForm">Find My Match →</button>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    
+    <section class="how-syntonia-works" id="howItWorks"> 
+        <span class="eyebrow">HOW SYNTONIA WORKS</span>
+        
+        <h3>Simple from search to stay.</h3>
+
+        <div>
+            <ul>
+                <li>
+                    <span class="step-number">01</span>
+                    <h4>Tell us what you need.</h4>
+                    <p>Location, budget and lifestyle - in under two minutes.</p>
+                </li>
+                
+                <li>
+                    <span class="step-number">02</span>
+                    <h4>Find your match</h4>
+                    <p>Discover suitable homes and compatible roommates.</p>
+                </li>
+
+                <li>
+                    <span class="step-number">03</span>
+                    <h4>Stay Supported</h4>
+                    <p>Syntonia is there when you need help from day one.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    
+    
+    
+    
+    <section class="featured-homes" id="homes">
+      <div class="homes-stage">
+        <span class="eyebrow">FEATURED HOMES</span>
+        
+        <div class="featured-homes-heading">
+            <h3>A few places worth coming home to.</h3>
+
+            <!-- <button data-open="demoNotice">Explore all homes →</button> -->
+        </div>
+
+        <article class="home-cards">
+            <div class="home-card">
+                <div class="image-wrap">
+                    <img src="images/RealEstateHouse1.webp" alt="White multi-storey apartment building with balconies and a parked car" width="800" height="600" loading="lazy">
+
+                    <span class="verified-badge">Sample</span>
+                
+                    <p class="price">₦1.8M<span> / year</span></p>
+                </div>
+                
+                <h4>Modern 1-bedroom flat</h4>
+                <p class="location">Yaba, Lagos</p>
+
+                <div class="last-section">
+                    <a href="#" data-open="demoNotice">View Home →</a>
+                </div>
+            </div>
+            
+            <div class="home-card">
+                <div class="image-wrap">
+                    <img src="images/RealEstateHouse2.webp" alt="Row of white apartment blocks along a quiet estate road" width="800" height="600" loading="lazy">
+
+                    <span class="verified-badge">Sample</span>
+                
+                    <p class="price">₦1.5M<span> / year</span></p>
+                </div>
+                
+                <h4>Self-contained studio</h4>
+                <p class="location">Wuse 2, Abuja</p>
+                
+                <div class="last-section">
+                    <a href="#" data-open="demoNotice">View Home →</a>
+                </div>
+            </div>
+            
+            <div class="home-card">
+                <div class="image-wrap">
+                    <img src="images/finalSection.jpg" alt="Modern white two-storey house with a carport and palm trees" width="800" height="600" loading="lazy">
+
+                    <span class="verified-badge">Sample</span>    
+                
+                    <p class="price">₦6.0M<span> / year</span></p>
+                </div>
+                
+                <h4>Spacious 2 bedroom apartment</h4>
+                <p class="location">Lekki Phase 1, Lagos</p>
+                
+                <div class="last-section">
+                    <a href="#" data-open="demoNotice">View Home →</a>
+                </div>
+            </div>
+        </article>
+      </div>
+    </section>
+    
+    
+    
+    
+    <section class="roommate-matching" id="roommates">
+        <span class="eyebrow">ROOMMATE MATCHING</span>
+        
+        <h3>The right roommate can make a house feel like a home.</h3>
+
+        <p>We look beyond location and budget. Lifestyle compatibility matters too.</p>
+
+        <button data-open="roommateForm">Find a Roommate →</button>
+    </section>
+    
+    
+    
+    
+    <section class="tenant-advocacy" id="tenantAdvocacy">
+        
+        <span class="eyebrow">TENANT ADVOCACY</span>
+        <br> <br>
+        <h3>Your home.</h3>
+        <h3>Your peace of mind.</h3>
+        <p class="text">You shouldn't have to handle every housing problem alone.</p>
+
+        <div>
+            <ul>
+                <li>
+                    <span class="step-circle">1</span>
+                    
+                    <div>
+                        <h4>Report</h4>
+                        <p>Tell us what happened.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="step-circle">2</span>
+                    
+                    <div>
+                        <h4>Follow Up</h4>
+                        <p>We help communicate and follow up with your landlord.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="step-circle">3</span>
+
+                    <div>
+                        <h4>Resolve</h4>
+                        <p>Stay informed as the issue is addressed.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <button data-open="tenantSupport">Get Tenant Support →</button>
+    </section>
+    
+    
+    
+    
+    <section class="built-around-better"> 
+      <div class="bab-stage">
+        <h3>Built around better renting.</h3>
+
+        <div class="bab-viewport">
+            <ul>
+                <li>
+                    <span class="step-line"></span>
+                    <h4>Compatible living</h4>
+                    <p>Find people whose lifestyle fit ours - not just people looking for room.</p>
+                </li>
+                
+                <li>
+                    <span class="step-line"></span>
+                    <h4>Tenant Support</h4>
+                    <p>Have somewhere to turn when problems arise, without having to handle everything alone.</p>
+                </li>
+
+                <li>
+                    <span class="step-line"></span>
+                    <h4>Better Homes</h4>
+                    <p>Discover carefully presented houses worth coming home to.</p>
+                </li>
+            </ul>
+        </div>
+      </div>
+    </section>
+    
+    
+    
+    <section class="final-section">
+        <h3>Ready to rent differently?</h3>
+        
+        <p>Find your next home. Find the right roommate. Know you have support.</p>
+
+        <button data-open="getStarted">Get Started →</button>
+    </section>
+    
+    
+    
+    <footer class="site-footer">
+        <div class="footer-columns-grid">
+            <div class="footer-brand">
+                <img src="images/syntonia_logo_white_transparent.svg" alt="syntonia logo">
+                <p>The smarter, verified way to find your next roommate.</p>
+
+                <div class="social-icons">
+                    <!-- <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a> -->
+                    
+                    <a href="https://www.instagram.com/syntonia.ng?igsh=NHlhM2MweXAwOWpq" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    
+                    <a href="https://wa.me/message/VVRLBMNBULHYA1" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                    
+                    <!-- <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Tiktok">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a> -->
+                </div>
+            </div>
+
+            
+            <div class="footer-location">
+                <h4 class="footer-heading">Location</h4>
+                <ul class="location-list">
+                    <li>Lagos</li>
+                    <li>Oju-ore</li>
+                    <li>Surulere</li>
+                </ul>
+            </div>
+    
+            
+            <div class="contact-info">
+                <h4 class="footer-heading">Contact Us</h4>
+                <p><i class="fa-solid fa-envelope"></i><a href="mailto:info.syntoniaspace@gmail.com"> syntoniaspace@gmail.com </a></p>
+                <p><i class="fa-solid fa-phone"></i><a href="tel:+2348079724472"> 080 79 724 472 </a></p>
+                <p><i class="fa-solid fa-location-dot"></i> Lagos, Nigeria</p>
+            </div>
+        
+        </div>
+        
+        
+        <div class="footer-bottom-bar">
+            <span>&copy; 2026 Syntonia. All Rights Reserved.</span>
+            <br>
+        </div>
+
+        
+        <button id="backToTop" aria-label="Back to Top">
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
+    </footer>
+
+
+    <!-- Forms -->
+
+    <!-- Find a Roommate -->
+    <form class="modal" id="roommateForm">
+        <button type="button" class="close-btn">✕</button>
+
+        <p class="eyebrow">Roommate Matching</p>
+        <h2>Find your match</h2>
+        <p class="subtitle">Tell us a bit about yourself and what you're looking for.</p>
+
+        <div class="field">
+            <label for="location">Preferred location</label>
+            <input type="text" id="location" placeholder="Lekki, Lagos">
+        </div>
+
+        <div class="field">
+            <label for="budget">Monthly budget</label>
+            <input type="text" id="budget" placeholder="₦100k – ₦250k / month">
+        </div>
+
+        <div class="field">
+            <label>Living preferences</label>
+            <div class="checkbox-grid">
+            <div class="checkbox-item"><input type="checkbox" id="p1"><label for="p1" style="margin:0;font-weight:400;">Early riser</label></div>
+            <div class="checkbox-item"><input type="checkbox" id="p2"><label for="p2" style="margin:0;font-weight:400;">Non-smoker</label></div>
+            <div class="checkbox-item"><input type="checkbox" id="p3"><label for="p3" style="margin:0;font-weight:400;">Works remotely</label></div>
+            <div class="checkbox-item"><input type="checkbox" id="p4"><label for="p4" style="margin:0;font-weight:400;">Clean &amp; organised</label></div>
+            <div class="checkbox-item"><input type="checkbox" id="p5"><label for="p5" style="margin:0;font-weight:400;">Quiet home</label></div>
+            <div class="checkbox-item"><input type="checkbox" id="p6"><label for="p6" style="margin:0;font-weight:400;">Social</label></div>
+            </div>
+        </div>
+
+        <button type="submit" class="submit-btn">Find Compatible Roommates</button>
+        <p class="reassurance">We'll notify you when we find a good match.</p>
+    </form>
+
+    
+    <!-- Get Started Form -->
+    <form class='modal' id="getStarted">
+        
+        <button type="button" class="close-btn">✕</button>
+
+        <p class="eyebrow">Get Started</p>
+        <h2>How can we help?</h2>
+        <p class="subtitle">Tell us what you need and we'll point you in the right direction.</p>
+
+        <a href="#homes" class="choice" data-close>
+            <span class="choice-icon">🏠</span>
+            <span class="choice-text">
+                <strong>Find a Home</strong>
+                <small>Browse vetted listings in Lagos and Abuja.</small>
+            </span>
+            <span class="choice-arrow">→</span>
+        </a>
+
+        <button type="button" class="choice" data-open="roommateForm">
+            <span class="choice-icon">🤝</span>
+            <span class="choice-text">
+                <strong>Find a Roommate</strong>
+                <small>Get matched with compatible people.</small>
+            </span>
+            <span class="choice-arrow">→</span>
+        </button>
+
+        <button type="button" class="choice" data-open="tenantSupport">
+            <span class="choice-icon">🛡️</span>
+            <span class="choice-text">
+                <strong>Tenant Support</strong>
+                <small>Get help with a housing problem.</small>
+            </span>
+            <span class="choice-arrow">→</span>
+        </button>
+    </form>
+
+
+    <!-- Tenant Support -->
+    <form class="modal" id="tenantSupport">
+        <button type="button" class="close-btn">✕</button>
+
+        <p class="eyebrow">Tenant Advocacy</p>
+        <h2>Report a housing issue</h2>
+        <p class="subtitle">We'll help you communicate with your landlord and follow up until it's resolved.</p>
+
+        <div class="field">
+            <label for="issueType">Issue type</label>
+            <select id="issueType" name="issueType">
+                <option>Maintenance / Repairs</option>
+                <option>Rent or deposit dispute</option>
+                <option>Eviction or notice</option>
+                <option>Landlord harassment</option>
+                <option>Safety or security</option>
+                <option>Other</option>
+            </select>
+        </div>
+
+        <div class="field">
+            <label for="issueDetails">Describe the issue</label>
+            <textarea id="issueDetails" name="issueDetails" rows="4" placeholder="Tell us what's happening…" required></textarea>
+        </div>
+
+        <div class="field">
+            <label for="contact">WhatsApp or email</label>
+            <input type="text" id="contact" name="contact" placeholder="+234 801 234 5678" required>
+        </div>
+
+        <button type="submit" class="submit-btn">Submit Report</button>
+        <p class="reassurance">We typically follow up within 24 hours.</p>
+    </form>
+
+
+    <!-- Demo notice -->
+    <div class="modal" id="demoNotice">
+        <button type="button" class="close-btn">✕</button>
+
+        <p class="eyebrow">Demo project</p>
+        <h2>This is a sample listing</h2>
+        <p class="subtitle">Syntonia is a demo built by Wisdom Web Services. On a live site, this opens the full property page with photos, details and a contact button.</p>
+
+        <button type="button" class="submit-btn" data-close>Got it</button>
+    </div>
+
+</body>
+</html>
+
